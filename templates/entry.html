@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="left">
+	<!--标题-->
+	<h1>{{ the_title }}</h1>
+
+    <div>
+<p>贸易争端源起于美国总统唐纳德·特朗普于2018年3月22日签署备忘录时，突然宣称“中国偷窃美国知识产权和商业秘密”，并根据1974年贸易法第301条要求美国贸易代表对从中国进口的商品征收关税，涉及商品总计估达600亿美元。中国商务部其后作出反制措施向128种美国进口商品征税，其中包括美国向中国出口最多的货品大豆。贸易战的成因多种多样但本网站将仅从贸易的角度来看这几年中美和全球的经济形势，请点击以下三个按钮进入查看数据图表及其故事</p>
+</div>
+
+    <form method="post" action="/exports_imports_data">
+	<button class="exports_imports_data">全球进出口数据</button>
+    </form>
+    <form method="post" action="/exports_imports_compare">
+	<button class="exports_imports_compare">全球进出口数据地图对比分析</button>
+    </form>
+    <form method="post" action="/uncn">
+	<button class="uncn">中美贸易差</button>
+    </form>
+    <form method="post" action="/worldhhh">
+	<button class="worldhhh">世界经济趋势</button>
+    </form>
+
+</div>
+{% endblock %}

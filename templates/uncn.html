@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts-gl.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+</head>
+
+{% block body %}
+
+<h1>{{ h1 }}</h1>
+<p><input type='SUBMIT' onclick='javascript:history.back(-1);' value='返回首页'></p>
+<p>贸易顺差是指,一个国家或地区在一定时期内的出口额大于进口额的现象。</p>
+<p>贸易逆差是指,一个国家或地区在一定时期内的进口额大于出口额的现象。</p>
+<p>美国是世界第一贸易逆差国,且逆差规模远远高于其他逆差国家,自1991年已累计111930亿美元的贸易逆差。 美元作为重要国际货币体系主导货币,决定了美国需要与世界其他国家发生持续性贸易逆差。
+美国需要从世界其他地区购买更多的产品,而不是美国向世界其他地方销售产品,从而使美元持续性流入其他国家。 尼克松,里根,奥巴马,特朗普,,美国历任总统毫无例外地致力于制减赤字,他是美国多次挥舞贸易保护主义大旗的重要原因。
+
+<p>中国
+2001年12月11日,中国正式加入世界贸易组织,成为其第143个成员。2013年习近平主席提出了一带一路倡议和构建“人类命运共同体的理念、使中国的改革开放进入到一个新的、更高的阶段累计净贸易额:2,318.978加入WTo后,中国制造走向了全世界,中国也维持了贸易顺差的状态。在适应经济全球化的过程中也有产业结构的调整。
+</p>
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+{% endblock %}

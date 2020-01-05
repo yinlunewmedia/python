@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts-gl.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+</head>
+
+{% block body %}
+<h1>全球进出口地图对比分析</h1>
+<p>从该图可以看出不管是进口还是出口，中美都是世界上最大的两个进出口国家，都相当依赖对方来消化自己国家的商品，也需要大量购买对方的商品</p>
+<p><input type='SUBMIT' onclick='javascript:history.back(-1);' value='返回首页'></p>
+{{ the_plot_all_1|safe }}
+{{ the_plot_all_2|safe }}
+{{ the_res|safe }}
+
+{% endblock %}

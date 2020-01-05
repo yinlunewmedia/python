@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts.min.js"></script>
+    <script src="http://oog4yfyu0.bkt.clouddn.com/echarts-gl.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript " src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript " src="http://oog4yfyu0.bkt.clouddn.com/wordcloud.js"></script>
+</head>
+
+{% block body %}
+<h1>世界经济趋势</h1>
+<p>过去数十年间，经济全球化喜忧参半，在08年金融危机后，世界贸易总额增长放缓，15年后进入衰退期，随着特朗普当选美国总统，2018年开启了中美贸易战</p>
+<form method='POST' action='/worldppp'>
+<p><input value='看图点这里' type='SUBMIT'></p>
+</form>
+<p><input type='SUBMIT' onclick='javascript:history.back(-1);' value='返回首页'></p>
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+{% endblock %}
